@@ -1,0 +1,244 @@
+
+2022-06-08 04:56:19,435 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 04:56:28,783 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 04:56:36,491 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 04:56:46,169 ERROR: Exception on /shows [GET] [in C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py", line 456, in shows
+    return render_template('pages/shows.html', shows=data)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\templating.py", line 148, in render_template
+    return _render(
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\jinja2\environment.py", line 1289, in render
+    self.environment.handle_exception()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\jinja2\environment.py", line 924, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\ANOKYE\Desktop\flask_app\fyyur\templates\pages\shows.html", line 1, in <module>
+    {% extends 'layouts/main.html' %}
+  File "C:\Users\ANOKYE\Desktop\flask_app\fyyur\templates\layouts\main.html", line 103, in <module>
+    {% block content %}{% endblock %}
+  File "C:\Users\ANOKYE\Desktop\flask_app\fyyur\templates\pages\shows.html", line 9, in <module>
+    <h4>{{ show.start_time|datetime('full') }}</h4>
+  File "C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py", line 32, in format_datetime
+    date = dateutil.parser.parse(value)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\dateutil\parser.py", line 1168, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\dateutil\parser.py", line 556, in parse
+    res, skipped_tokens = self._parse(timestr, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\dateutil\parser.py", line 675, in _parse
+    l = _timelex.split(timestr)         # Splits the timestr into tokens
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\dateutil\parser.py", line 192, in split
+    return list(cls(s))
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\dateutil\parser.py", line 60, in __init__
+    raise TypeError('Parser must be a string or character stream, not '
+TypeError: Parser must be a string or character stream, not datetime
+2022-06-08 04:57:03,122 ERROR: Exception on /artists/1 [GET] [in C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py", line 254, in show_artist
+    for show in artist.past_shows:
+AttributeError: 'Artist' object has no attribute 'past_shows'
+2022-06-08 04:57:12,558 ERROR: Exception on /venues [GET] [in C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py", line 71, in venues
+    "num_upcoming_shows": len(list(filter(lambda x: x.start_time > datetime.now(), venue.shows)))
+  File "C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py", line 71, in <lambda>
+    "num_upcoming_shows": len(list(filter(lambda x: x.start_time > datetime.now(), venue.shows)))
+AttributeError: module 'datetime' has no attribute 'now'
+2022-06-08 05:07:35,212 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 05:07:44,764 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 05:08:05,751 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 05:08:17,253 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 05:10:28,307 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 05:10:33,025 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 05:21:32,882 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 05:21:36,523 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 06:26:09,167 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 06:26:18,970 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 06:26:36,344 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 06:26:53,938 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 07:51:46,675 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 07:52:05,510 ERROR: Exception on /shows/create [GET] [in C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py", line 465, in create_shows
+    form = ShowForm()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\wtforms\form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\form.py", line 157, in __init__
+    super(Form, self).__init__(*args, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\wtforms\form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\wtforms\form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\wtforms\csrf\core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\csrf.py", line 139, in generate_csrf_token
+    return generate_csrf(
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\csrf.py", line 33, in generate_csrf
+    secret_key = _get_config(
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+2022-06-08 07:52:27,336 ERROR: Exception on /venues/create [GET] [in C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py", line 148, in create_venue_form
+    form = VenueForm()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\wtforms\form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\form.py", line 157, in __init__
+    super(Form, self).__init__(*args, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\wtforms\form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\wtforms\form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\wtforms\csrf\core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\csrf.py", line 139, in generate_csrf_token
+    return generate_csrf(
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\csrf.py", line 33, in generate_csrf
+    secret_key = _get_config(
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+2022-06-08 07:54:11,334 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 07:54:18,688 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 07:55:44,150 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 07:56:20,954 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 08:14:10,198 INFO: errors [in C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py:514]
+2022-06-08 08:14:22,968 ERROR: Exception on /venues/create [GET] [in C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py", line 148, in create_venue_form
+    form = VenueForm()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\wtforms\form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\form.py", line 157, in __init__
+    super(Form, self).__init__(*args, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\wtforms\form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\wtforms\form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\wtforms\csrf\core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\csrf.py", line 139, in generate_csrf_token
+    return generate_csrf(
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\csrf.py", line 33, in generate_csrf
+    secret_key = _get_config(
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+2022-06-08 08:14:45,058 ERROR: Exception on /artists/create [GET] [in C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py", line 393, in create_artist_form
+    form = ArtistForm()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\wtforms\form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\form.py", line 157, in __init__
+    super(Form, self).__init__(*args, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\wtforms\form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\wtforms\form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\wtforms\csrf\core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\csrf.py", line 139, in generate_csrf_token
+    return generate_csrf(
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\csrf.py", line 33, in generate_csrf
+    secret_key = _get_config(
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+2022-06-08 08:14:49,011 ERROR: Exception on /shows/create [GET] [in C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\ANOKYE\Desktop\flask_app\fyyur\app_test.py", line 465, in create_shows
+    form = ShowForm()
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\wtforms\form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\form.py", line 157, in __init__
+    super(Form, self).__init__(*args, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\wtforms\form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\wtforms\form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\wtforms\csrf\core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\csrf.py", line 139, in generate_csrf_token
+    return generate_csrf(
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\csrf.py", line 33, in generate_csrf
+    secret_key = _get_config(
+  File "C:\Users\ANOKYE\Desktop\flask_app\env_app\lib\site-packages\flask_wtf\csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
